@@ -1,0 +1,586 @@
+Html,
+Body {
+  Padding: 0;
+  Margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.logo img {
+  max-width: 470px;
+}
+.logo span {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 100% !important;
+}
+
+main {
+  width: 100%;
+  justify-content: center;
+}
+
+.mantenimiento {
+  text-transform: none !important;
+}
+
+.sitioenconstruccion {
+  width: 100%;
+  height: 400px;
+  background-size: 100%;
+  background-image: url(../Imagenes/construccion.jpg);
+  overflow: hidden;
+  background-size: contain;
+}
+
+.contenedorBusqueda {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+.contenedorBusqueda button {
+  width: 20%;
+  height: 40px !important;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  line-height: 40px;
+}
+@media (min-width: 800px) {
+  .contenedorBusqueda button {
+    width: 10%;
+    border-radius: 5px;
+  }
+}
+.contenedorBusqueda button:hover {
+  box-shadow: 2px 2px 10px rgb(17, 177, 17);
+  transform: translateY(-3%);
+  border: 2px solid rgb(17, 177, 17);
+}
+
+.barraBusqueda {
+  width: 100%;
+  height: 40px;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  border: 2px solid black;
+  border-radius: 5px;
+  outline: none;
+}
+.barraBusqueda:hover {
+  box-shadow: 2px 2px 10px rgb(17, 177, 17);
+  transform: translateY(-3%);
+  border: 2px solid rgb(17, 177, 17);
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 300px;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center !important;
+}
+@media (min-width: 480px) {
+  .container {
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+}
+@media (min-width: 800px) {
+  .container {
+    gap: 40px;
+    display: flex;
+    justify-content: center !important;
+  }
+}
+
+.containerCarrito {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 480px) {
+  .containerCarrito {
+    height: auto;
+  }
+}
+@media (min-width: 800px) {
+  .containerCarrito {
+    width: 100%;
+    height: auto;
+    gap: 5px;
+  }
+}
+
+#verCarrito {
+  width: 100px;
+  margin-left: 2%;
+}
+
+@media (min-width: 992px) {
+  .volverTienda {
+    padding: 0% !important;
+    padding-right: 16px !important;
+  }
+}
+
+.contenedorCarrito {
+  display: flex;
+  width: 90% !important;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 200px;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+@media (min-width: 800px) {
+  .contenedorCarrito {
+    width: 90% !important;
+    justify-content: center;
+    margin: 0%;
+  }
+}
+
+.imagenesCarrito {
+  width: auto;
+  display: flex;
+  border-radius: 3px;
+  width: 45%;
+  justify-content: center;
+  background-color: white;
+}
+.imagenesCarrito img {
+  padding: 5%;
+  width: auto;
+  height: auto;
+  align-content: center;
+}
+
+.contenedores {
+  background-color: #eaeeee;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.contenedorCarritoinfo {
+  width: 90%;
+  height: 90%;
+  margin-left: 2%;
+  padding: 0%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.contenedorCarritoinfo h2 {
+  width: 100%;
+  padding: 0;
+  margin: 0%;
+}
+.contenedorCarritoinfo h3 {
+  width: 100%;
+  padding: 0;
+  margin: 0%;
+  text-align: center;
+}
+.contenedorCarritoinfo form {
+  display: flex;
+  justify-content: center;
+}
+.contenedorCarritoinfo select {
+  font-family: "Cormorant SC";
+}
+
+.contenedornompre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorTotal {
+  display: flex;
+  border: 2px double black;
+  border-radius: 5px;
+  background-color: #eaeeee;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+}
+@media (min-width: 800px) {
+  .contenedorTotal {
+    width: 70% !important;
+    margin: 0%;
+    margin-bottom: 60px;
+  }
+}
+.contenedorTotal p {
+  font-family: "Roboto", sans-serif;
+  padding-left: 2%;
+  font-weight: bold;
+}
+
+.resumenCompra {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.resumenCompra h2 {
+  background: none;
+  font-size: medium;
+  padding: 0%;
+  margin: 0%;
+}
+.resumenCompra h3 {
+  text-decoration: none;
+  color: black;
+}
+
+.botonesConfirmar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+.botonCancelar {
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid black;
+  color: rgb(49, 49, 49);
+  font-family: "Cormorant SC", sans-serif;
+  font-weight: bold;
+}
+.botonCancelar:hover {
+  background-color: rgb(177, 17, 17);
+  box-shadow: 5px 5px 20px rgb(177, 17, 17);
+  transform: translateY(-3%);
+  color: #fff;
+}
+
+.botonConfirmar {
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid black;
+  color: rgb(49, 49, 49);
+  font-family: "Cormorant SC", sans-serif;
+  font-weight: bold;
+}
+.botonConfirmar:hover {
+  background-color: rgb(17, 177, 17);
+  box-shadow: 5px 5px 20px rgb(17, 177, 17);
+  transform: translateY(-3%);
+  color: #fff;
+}
+
+.tarjeta {
+  width: 300px;
+  margin: 20px;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.626);
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 400ms ease-out;
+}
+.tarjeta:hover {
+  box-shadow: 5px 5px 20px rgb(17, 177, 17);
+  transform: translateY(-3%);
+}
+
+.tarjetaBoton {
+  justify-content: center;
+  display: flex;
+}
+
+.boton {
+  height: 50px !important;
+  width: 35%;
+  border-radius: 20px;
+  background-color: #CCD1D1;
+  border: 1px solid black;
+  padding: 0% !important;
+  color: rgb(49, 49, 49);
+  font-family: "roboto";
+}
+.boton:hover {
+  background-color: rgb(17, 177, 17);
+  box-shadow: 5px 5px 20px rgb(17, 177, 17);
+  transform: translateY(-3%);
+  color: #fff;
+}
+@media (min-width: 481px) {
+  .boton {
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    line-height: 3rem;
+  }
+}
+
+.imagenProducto {
+  width: 100%;
+  height: 100%;
+}
+.imagenProducto img {
+  width: 100%;
+  height: 100%;
+}
+
+.nombreProducto h2 {
+  font-family: "Cormorant SC";
+  font-size: 20px;
+  color: rgb(94, 94, 94);
+  background-color: #fff !important;
+  margin-bottom: 0%;
+}
+@media (min-width: 481px) {
+  .nombreProducto h2 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 991px) {
+  .nombreProducto h2 {
+    font-size: 30px;
+  }
+}
+
+.precioProducto h3 {
+  font-family: "Cormorant SC";
+  font-size: 20px;
+  color: rgb(71, 71, 71);
+  text-decoration: none !important;
+}
+@media (min-width: 481px) {
+  .precioProducto h3 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 991px) {
+  .precioProducto h3 {
+    font-size: 30px;
+  }
+}
+
+.tienda {
+  width: 100%;
+  height: 400px;
+  background-size: 100%;
+  background-image: url(../imagenes/ropadeportiva.jpg);
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.barra-redes {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  z-index: 100;
+}
+.barra-redes a {
+  padding: 0.5%;
+  text-decoration: none;
+  color: black;
+}
+
+.menu li a:hover {
+  color: black;
+}
+.menu ul {
+  justify-content: space-around !important;
+  column-gap: 70px;
+}
+@media (min-width: 991px) {
+  .menu {
+    display: flex !important;
+    justify-content: space-around !important;
+    column-gap: 50px;
+    padding: 0 !important;
+    padding-left: 5% !important;
+  }
+}
+
+.tucarrito h2 {
+  background: none;
+  text-align: start;
+}
+
+.tituloTienda h1 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.imgCarrito a {
+  width: 40px;
+  height: 38px;
+  background-color: rgb(17, 177, 17);
+  background-size: contain;
+  background-image: url(../imagenes/carrito.jpg);
+  margin-right: 2%;
+  position: fixed;
+  top: 242px;
+  right: 0;
+  border-radius: 10px;
+}
+@media (min-width: 740px) {
+  .imgCarrito a {
+    top: 245px;
+  }
+}
+@media (min-width: 990px) {
+  .imgCarrito a {
+    top: 250px;
+  }
+}
+@media (min-width: 1200px) {
+  .imgCarrito a {
+    top: 253px;
+  }
+}
+
+.botonquitar {
+  width: 15%;
+}
+
+.imgBotonQuitar {
+  width: 100%;
+  height: 100%;
+  border: 2px double black;
+  background-color: rgb(254, 124, 124);
+}
+.imgBotonQuitar:hover {
+  background-color: red;
+  box-shadow: 5px 5px 20px rgb(254, 124, 124);
+  color: #fff;
+}
+
+section h2 {
+  text-transform: uppercase;
+}
+
+.contain {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+h1 {
+  font-family: "Cormorant SC", serif;
+  color: black;
+  background-color: #CCD1D1;
+  font-weight: lighter;
+  font-size: 50px;
+  text-align: center;
+  margin: 0%;
+  margin-bottom: 1%;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 30px;
+  font-weight: bold !important;
+  text-align: center;
+  background-color: #CCD1D1;
+  margin: 0%;
+  padding: 2%;
+}
+
+h3 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer_uno {
+  display: flex;
+  background-color: #CCD1D1;
+}
+.footer_uno p {
+  padding: 0%;
+  margin: 0%;
+}
+.footer_uno p a {
+  text-decoration: none;
+  color: black;
+}
+.footer_uno p a:hover {
+  color: grey;
+}
+
+.size {
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 20px;
+}
+
+.quantityContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.quantity {
+  width: 20%;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-top: 1%;
+  height: 20px;
+  font-family: "Cormorant SC", sans-serif;
+  text-align: center;
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  background-color: #CCD1D1;
+  padding-top: 1%;
+  border-top: 2px solid black;
+}
+
+.toastify-bottom {
+  position: fixed;
+  margin-left: 2%;
+  border-radius: 20px;
+  padding: 1%;
+}
+
+/*# sourceMappingURL=styles.css.map */
