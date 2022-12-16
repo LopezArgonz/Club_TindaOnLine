@@ -51,6 +51,48 @@ function calcularTotal() {
         total.innerText = `$ ${totalCarrito.toLocaleString()}`
 }
 
+const btnComprar = document.querySelector(".botonConfirmar")
 
+btnComprar.addEventListener("click", ()=> {
+    Swal.fire({
+        icon: 'question',
+        title: '¿Confirmas la compra de estos productos?',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: `Cancelar`,
+      }) 
+      .then(result => {
+        if (result.isConfirmed) {
+            localStorage.removeItem("miCarrito")
+            carrito.length = 0
+            Swal.fire("Gracias por su compra", '', 'info')
+                .then(()=> {
+                    location.href = '../index.html'
+                })
+        }
+      })
+})
+
+const btnCancelar = document.querySelector(".botonCancelar")
+
+btnCancelar.addEventListener("click", ()=> {
+    Swal.fire({
+        icon: 'question',
+        title: '¿Estas seguro que quieres cancelar tu compra?',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: `Cancelar`,
+      }) 
+      .then(result => {
+        if (result.isConfirmed) {
+            localStorage.removeItem("miCarrito")
+            carrito.length = 0
+            Swal.fire("Esperamos verte de nuevo por aquí", '', 'info')
+                .then(()=> {
+                    location.href = '../index.html'
+                })
+        }
+      })
+})
 
 
