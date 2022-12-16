@@ -54,18 +54,21 @@ function calcularTotal() {
 const btnComprar = document.querySelector(".botonConfirmar")
 
 btnComprar.addEventListener("click", ()=> {
-    Swal.fire({
-        icon: 'question',
-        title: '¿Confirmas la compra de estos productos?',
+    Swal.fire({        
+        title: '¿Querés confirmar la compra?',
+        imageUrl: '../imagenes/escudo.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        background: "white",      
         showCancelButton: true,
         confirmButtonText: 'Confirmar',
-        cancelButtonText: `Cancelar`,
-      }) 
+        cancelButtonText: `Cancelar`,        
+        }) 
       .then(result => {
         if (result.isConfirmed) {
             localStorage.removeItem("miCarrito")
             carrito.length = 0
-            Swal.fire("Gracias por su compra", '', 'info')
+            Swal.fire("¡Muchas gracias! Te enviaremos un correo con los datos del envío. ¡Hasta pronto! 😀", '', '')
                 .then(()=> {
                     location.href = '../index.html'
                 })
@@ -77,7 +80,7 @@ const btnCancelar = document.querySelector(".botonCancelar")
 
 btnCancelar.addEventListener("click", ()=> {
     Swal.fire({
-        icon: 'question',
+        imageUrl: '../imagenes/escudo.jpg',
         title: '¿Estas seguro que quieres cancelar tu compra?',
         showCancelButton: true,
         confirmButtonText: 'Confirmar',
@@ -87,7 +90,7 @@ btnCancelar.addEventListener("click", ()=> {
         if (result.isConfirmed) {
             localStorage.removeItem("miCarrito")
             carrito.length = 0
-            Swal.fire("Esperamos verte de nuevo por aquí", '', 'info')
+            Swal.fire("Tu compra fue cancelada. Esperamos verte pronto por aquí 😀", '', '')
                 .then(()=> {
                     location.href = '../index.html'
                 })

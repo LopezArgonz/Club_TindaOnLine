@@ -583,4 +583,17 @@ h3 {
   padding: 1%;
 }
 
+.swal2-title {
+  background-color: white !important;
+  color: black !important;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: rgb(17, 177, 17) !important;
+}
+
+.swal2-popup {
+  background-color: white !important;
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -3,6 +3,14 @@ const container = document.getElementById("container")
 const inputSearch = document.querySelector("input#inputSearch")
 const verCarrito = document.getElementById("verCarrito")
 const imgCarrito = document.getElementById ("imgCarrito")
+const URL = "../bbdd/productos.json"
+const productos = []
+
+fetch (URL)
+    .then ((response) => data = response.json())
+    .then ((data) => productos.push (...data))
+    .then(() => cargarProductos(productos))
+    .then(() => activarBotones())
 
 imgCarrito.addEventListener("mousemove", ()=> {
     let totalCarrito = carrito.length
@@ -18,7 +26,7 @@ function cargarProductos(array) {
             container.innerHTML = contenido            
         }
 }
-cargarProductos(productos)
+
 
 function activarBotones(){
     const botonesAdd = document.querySelectorAll ("button.boton")
@@ -31,7 +39,7 @@ function activarBotones(){
         })
     })
 }
-activarBotones()
+
 
 function filtrarProductos() {
     let resultado = productos.filter(producto => producto.nombre.toUpperCase().includes(inputSearch.value.toUpperCase().trim()))
@@ -64,6 +72,10 @@ const toast = (text, bgcolor)=> {
         style: {background: bgcolor || "rgb(17, 177, 17)", border: "1px solid green", color:"white"}
       }).showToast();
 }
+
+
+
+
 
 
 
