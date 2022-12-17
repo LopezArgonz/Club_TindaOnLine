@@ -1,4 +1,4 @@
-const carrito = JSON.parse(localStorage.getItem("miCarrito")) || []
+const carrito = JSON.parse(sessionStorage.getItem("miCarrito")) || []
 const container = document.getElementById("container")
 const inputSearch = document.querySelector("input#inputSearch")
 const botonBuscar = document.getElementById("botonBuscar")
@@ -35,7 +35,7 @@ function activarBotones(){
         btn.addEventListener("click", ()=> {
             let resultado = productos.find(prod => prod.id === parseInt (btn.id))            
                 carrito.push(resultado)
-                localStorage.setItem("miCarrito", JSON.stringify(carrito))                
+                sessionStorage.setItem("miCarrito", JSON.stringify(carrito))                
                 toast (`😀 ${resultado.nombre} se agregó al carrito`)
         })
     })

@@ -1,9 +1,9 @@
-const carrito = JSON.parse(localStorage.getItem("miCarrito")) ||[]
+const carrito = JSON.parse(sessionStorage.getItem("miCarrito")) ||[]
 const containerCarrito = document.getElementById("containerCarrito")
 
 function recuperarCarrito() {
     let tablaHTML = ""    
-    const carrito = JSON.parse(localStorage.getItem("miCarrito"))        
+    const carrito = JSON.parse(sessionStorage.getItem("miCarrito"))        
     if (carrito.length > -1) {
         console.log(carrito)
         carrito.forEach(ropa => {
@@ -22,7 +22,7 @@ function activarBotonesQuitar() {
             let idx = carrito.findIndex(ropa => ropa.nombre === btn.id)            
                 if (idx > -2){
                     carrito.splice(idx, 1)
-                    localStorage.setItem ("miCarrito", JSON.stringify(carrito))                                                            
+                    sessionStorage.setItem ("miCarrito", JSON.stringify(carrito))                                                            
                     recuperarCarrito()
                     activarBotonesQuitar()
                     toast ("🤨 El producto fue borrado del carrito", "red")                      
@@ -66,7 +66,7 @@ btnComprar.addEventListener("click", ()=> {
         }) 
       .then(result => {
         if (result.isConfirmed) {
-            localStorage.removeItem("miCarrito")
+            sessionStorage.removeItem("miCarrito")
             carrito.length = 0
             Swal.fire("¡Muchas gracias! Te enviaremos un correo con los datos del envío. ¡Hasta pronto! 😀", '', '')
                 .then(()=> {
@@ -88,7 +88,7 @@ btnCancelar.addEventListener("click", ()=> {
       }) 
       .then(result => {
         if (result.isConfirmed) {
-            localStorage.removeItem("miCarrito")
+            sessionStorage.removeItem("miCarrito")
             carrito.length = 0
             Swal.fire("Tu compra fue cancelada. Esperamos verte pronto por aquí 😀", '', '')
                 .then(()=> {
