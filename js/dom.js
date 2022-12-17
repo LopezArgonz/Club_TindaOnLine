@@ -1,6 +1,7 @@
 const carrito = JSON.parse(localStorage.getItem("miCarrito")) || []
 const container = document.getElementById("container")
 const inputSearch = document.querySelector("input#inputSearch")
+const botonBuscar = document.getElementById("botonBuscar")
 const verCarrito = document.getElementById("verCarrito")
 const imgCarrito = document.getElementById ("imgCarrito")
 const URL = "../bbdd/productos.json"
@@ -60,6 +61,8 @@ inputSearch.addEventListener("change", ()=> {
         activarBotones()
     }
 })
+
+botonBuscar.addEventListener("click", filtrarProductos())
 
 const toast = (text, bgcolor)=> {
     Toastify({
