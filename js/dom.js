@@ -47,9 +47,7 @@ function filtrarProductos() {
     if (resultado.length > 0) {
             cargarProductos(resultado)              
             activarBotones()           
-        } else {
-            console.warn("No se han encontrado coincidencias.")           
-        }    
+        } 
 } 
 
 
