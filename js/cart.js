@@ -1,4 +1,4 @@
-const carrito = JSON.parse(localStorage.getItem("miCarrito"))
+const carrito = JSON.parse(localStorage.getItem("miCarrito")) ||[]
 const containerCarrito = document.getElementById("containerCarrito")
 
 function recuperarCarrito() {
